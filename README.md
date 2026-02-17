@@ -2,11 +2,13 @@
 ## Overview
 
 This project analyzes class selection and loadout behavior in Battlefield 6 using deployment-normalized metrics and slot-aware modeling.
+
 The objective was to distinguish between:
 - Intentional selection
 - Situational usage
 - Default/passive loadout bias
 - Mode-driven class dependencies
+
 Rather than relying on raw usage counts, the model focuses on behavioral intent by normalizing for deployments and accounting for structural slot constraints.
 
 ## Dataset
@@ -28,12 +30,16 @@ Two datasets were analyzed:
 ## Methodology
 ### Deployment Normalization
 Usage_Count ÷ Class_Deployments
+
 This removes playtime bias and reflects behavioral frequency rather than raw volume.
 
 ### Behavioral Selection Threshold
 Intentional selection defined as:
+
 ≥ 0.10 uses per deployment
+
 (At least once per 10 deployments)
+
 This filters incidental usage while preserving meaningful gameplay integration.
 
 ### Slot-Aware Weighting
@@ -44,10 +50,12 @@ Weights were scaled proportionally to reflect loadout capacity and prevent struc
 
 ### Passive Bias Detection
 A Passive_Likelihood model was introduced to identify default-driven selection inflation.
+
 The model evaluates:
 - Number of observable alternative gadgets
 - Total alternative gadget usage intensity
 - A percentile-based usage threshold
+  
 This distinguishes high selection driven by gameplay integration from high selection driven by default behavior.
 
 ### Class–Mode Correlation
