@@ -1,7 +1,7 @@
 # Battlefield 6 – Class & Loadout Behavioral Modeling
 ## Overview
 
-This project analyzes class selection and loadout behavior in Battlefield 6 using deployment-normalized metrics and slot-aware behavioral modeling. The framework was designed to separate intentional gameplay integration from structural or default-driven selection bias.
+This project analyzes class selection and loadout behavior in Battlefield 6 through deployment-normalized behavioral modeling and slot-aware weighting frameworks. The framework was designed to separate intentional gameplay integration from structural or default-driven selection bias.
 
 The objective was to distinguish between:
 - Intentional selection
@@ -59,13 +59,23 @@ The model evaluates:
 This distinguishes high selection driven by gameplay integration from high selection driven by default behavior.
 
 ### Class–Mode Correlation
-Correlation analysis was performed between class share and mode share to evaluate structural relationships between class specialization and map environment.
+Correlation analysis was performed between class share and mode share to quantify structural dependencies between class specialization and map environment.
 
 ## Key Findings
 - RPG demonstrates a 94% selection rate with high integration intensity, indicating structurally dominant meta status.
 - Weapon Sling exhibits measurable passive bias, indicating selection inflation from default behavior.
 - Engineer selection strongly correlates with vehicle-heavy modes.
 - Gadget usage distribution is highly right-skewed, with a small number of items dominating usage.
+
+## Design Implications
+
+Selection rate alone is insufficient to evaluate balance health.
+
+Slot-aware weighting prevents structural inflation in multi-slot systems.
+
+Passive bias detection isolates default-driven meta distortion.
+
+Mode-specific class correlation informs targeted balance adjustments.
 
 ## Files
 - Excel modeling sheets
