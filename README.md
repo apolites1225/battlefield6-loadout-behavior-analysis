@@ -9,7 +9,7 @@ The objective was to distinguish between:
 - Default/passive loadout bias
 - Mode-driven class dependencies
 
-Rather than relying on raw usage counts, the model focuses on behavioral intent by normalizing for deployments and accounting for structural slot constraints.
+Rather than relying on raw usage counts, the model evaluates behavioral intent through normalization and slot-aware weighting.
 
 ## Dataset
 Two datasets were analyzed:
@@ -46,6 +46,7 @@ This filters incidental usage while preserving meaningful gameplay integration.
 Because loadouts contain structural slot constraints:
 - Gadgets (2 slots) capped at 0.50
 - Grenades (1 slot) capped at 1.00
+
 Weights were scaled proportionally to reflect loadout capacity and prevent structural inflation.
 
 ### Passive Bias Detection
@@ -75,5 +76,5 @@ Correlation analysis was performed between class share and mode share to quantif
 
 ## Files
 - [Case Study Presentation (PDF)](presentation/Battlefield6_Loadout_Behavior_Analysis_CaseStudy.pdf)
-- Excel modeling files available in the `/data` directory.
+- Excel modeling files available in the /data directory for full metric logic and calculations.
 
