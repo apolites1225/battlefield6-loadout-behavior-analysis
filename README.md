@@ -68,14 +68,10 @@ Correlation analysis was performed between class share and mode share to quantif
 - Gadget usage distribution is highly right-skewed, with a small number of items dominating usage.
 
 ## Design Implications
-
-Selection rate alone is insufficient to evaluate balance health.
-
-Slot-aware weighting prevents structural inflation in multi-slot systems.
-
-Passive bias detection isolates default-driven meta distortion.
-
-Mode-specific class correlation informs targeted balance adjustments.
+- Selection rate alone is insufficient to evaluate balance health.
+- Slot-aware weighting prevents structural inflation in multi-slot systems.
+- Passive bias detection isolates default-driven meta distortion.
+- Mode-specific class correlation informs targeted balance adjustments.
 
 ## Files
 - Excel modeling sheets
