@@ -1,46 +1,63 @@
 # Battlefield 6 – Class & Loadout Behavioral Modeling
 ## Overview
 
-This project analyzes class selection and loadout behavior using deployment-normalized metrics and slot-aware modeling.
-The goal was to distinguish:
-Intentional selection
-Situational usage
-Default/passive loadout bias
-Mode-driven class dependencies
+This project analyzes class selection and loadout behavior in Battlefield 6 using deployment-normalized metrics and slot-aware modeling.
+The objective was to distinguish between:
+- Intentional selection
+- Situational usage
+- Default/passive loadout bias
+- Mode-driven class dependencies
+Rather than relying on raw usage counts, the model focuses on behavioral intent by normalizing for deployments and accounting for structural slot constraints.
 
 ## Dataset
 Two datasets were analyzed:
 
 ### Gadget / Loadout Modeling
-- 100 players per class
+- 100 players per class (Assault, Engineer, Recon, Support)
+- Player–item level data
 - Usage normalized by class deployments
 
 ### Class–Mode Correlation
 - 100 players total
-- Mode buckets: Vehicle, Mixed, Infantry, BR
+- Mode share bucketed into:
+-- Vehicle
+-- Mixed
+-- Infantry
+-- Battle Royale (BR)
 
 ## Methodology
 ### Deployment Normalization
-- Usage_Count / Class_Deployments
+Usage_Count ÷ Class_Deployments
+This removes playtime bias and reflects behavioral frequency rather than raw volume.
 
 ### Behavioral Selection Threshold
-- ≥ 0.10 uses per deployment
+Intentional selection defined as:
+≥ 0.10 uses per deployment
+(At least once per 10 deployments)
+This filters incidental usage while preserving meaningful gameplay integration.
 
 ### Slot-Aware Weighting
-- Gadgets capped at 0.50 (2-slot system)
-- Grenades capped at 1.00 (1-slot system)
+Because loadouts contain structural slot constraints:
+- Gadgets (2 slots) capped at 0.50
+- Grenades (1 slot) capped at 1.00
+Weights were scaled proportionally to reflect loadout capacity and prevent structural inflation.
 
 ### Passive Bias Detection
-- Modeled based on observable alternative gadgets and usage intensity to isolate default-driven selection.
+A Passive_Likelihood model was introduced to identify default-driven selection inflation.
+The model evaluates:
+- Number of observable alternative gadgets
+- Total alternative gadget usage intensity
+- A percentile-based usage threshold
+This distinguishes high selection driven by gameplay integration from high selection driven by default behavior.
 
 ### Class–Mode Correlation
-- Evaluated relationships between class share and mode share.
+Correlation analysis was performed between class share and mode share to evaluate structural relationships between class specialization and map environment.
 
 ## Key Findings
-- RPG shows 94% selection rate with high integration intensity.
-- Weapon Sling exhibits measurable passive bias.
-- Engineer strongly correlates with vehicle-heavy modes.
-- Gadget usage distribution is highly right-skewed.
+- RPG demonstrates a 94% selection rate with high integration intensity, confirming core meta status.
+- Weapon Sling exhibits measurable passive bias, indicating selection inflation from default behavior.
+- Engineer selection strongly correlates with vehicle-heavy modes.
+- Gadget usage distribution is highly right-skewed, with a small number of items dominating usage.
 
 ## Files
 - Excel modeling sheets
