@@ -75,4 +75,5 @@ Correlation analysis was performed between class share and mode share to quantif
 
 ## Files
 - Excel modeling sheets
-- Case study presentation (PDF)
+- [Case Study Presentation (PDF)](presentation/Battlefield6_Loadout_Behavior_Analysis_CaseStudy.pdf)
+
