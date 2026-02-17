@@ -74,6 +74,6 @@ Correlation analysis was performed between class share and mode share to quantif
 - Mode-specific class correlation informs targeted balance adjustments.
 
 ## Files
-- Excel modeling sheets
 - [Case Study Presentation (PDF)](presentation/Battlefield6_Loadout_Behavior_Analysis_CaseStudy.pdf)
+- Excel modeling files available in the `/data` directory.
 
