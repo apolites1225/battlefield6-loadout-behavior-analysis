@@ -9,7 +9,7 @@ The objective was to distinguish between:
 - Default/passive loadout bias
 - Mode-driven class dependencies
 
-Rather than relying on raw usage counts, the model evaluates behavioral intent through normalization and slot-aware weighting.
+Rather than relying on raw usage counts, the model evaluates behavioral intent through normalization and slot-aware weighting techniques.
 
 ## Dataset
 Two datasets were analyzed:
