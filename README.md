@@ -20,10 +20,10 @@ Two datasets were analyzed:
 ### Class–Mode Correlation
 - 100 players total
 - Mode share bucketed into:
--- Vehicle
--- Mixed
--- Infantry
--- Battle Royale (BR)
+Vehicle
+Mixed
+Infantry
+Battle Royale (BR)
 
 ## Methodology
 ### Deployment Normalization
